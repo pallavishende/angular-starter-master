@@ -31,7 +31,8 @@
     var npmPackages = [
         '@angular',
         'rxjs',
-        'lodash'
+        'lodash',
+        'angular2-wizard'
     ];
 
     // Add package entries for packages that expose barrels using index.js
@@ -62,6 +63,8 @@
     packageNames.forEach(function(pkgName) {
         packages[pkgName] = { main: 'index.js', defaultExtension: 'js' };
     });
+    map['angular2-wizard'] = 'node_modules/angular2-wizard/dist/index.js'
+    packages['node_modules/angular2-wizard/dist/src/'] = { defaultExtension: 'js' };
 
     ngPackageNames.forEach(function(pkgName) {
         map['@angular/' + pkgName] = 'node_modules/@angular/' + pkgName +

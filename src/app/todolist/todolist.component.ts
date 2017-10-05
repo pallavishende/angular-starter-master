@@ -4,8 +4,10 @@ import { Todo } from './todo.model';
 
 @Component({
     moduleId: module.id,
+    styleUrls: ['/todolist.css'],
     selector: 'as-todolist',
-    templateUrl: 'todolist.html'
+    templateUrl: 'todolist.html',
+
 })
 export class TodolistComponent {
     public todo: Todo;
@@ -16,8 +18,8 @@ export class TodolistComponent {
         this.showCompleted = true;
         this.todo = new Todo('Add me to list!', false);
         this.list = [
-            new Todo('Its cool'),
-            new Todo('Hello', true)
+            new Todo('jane doe'),
+            new Todo('john doe', true)
         ];
     }
 
