@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var support_component_1 = require("./support.component");
+exports.SupportRoutes = [
+    { path: 'support', component: support_component_1.SupportlistComponent }
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zdXBwb3J0L3N1cHBvcnQucm91dGVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEseURBQTJEO0FBRTlDLFFBQUEsYUFBYSxHQUFXO0lBQ25DLEVBQUUsSUFBSSxFQUFFLFNBQVMsRUFBRSxTQUFTLEVBQUUsd0NBQW9CLEVBQUU7Q0FDckQsQ0FBQyIsImZpbGUiOiJhcHAvc3VwcG9ydC9zdXBwb3J0LnJvdXRlcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFJvdXRlcyB9IGZyb20gJ0Bhbmd1bGFyL3JvdXRlcic7XG5cbmltcG9ydCB7IFN1cHBvcnRsaXN0Q29tcG9uZW50IH0gZnJvbSAnLi9zdXBwb3J0LmNvbXBvbmVudCc7XG5cbmV4cG9ydCBjb25zdCBTdXBwb3J0Um91dGVzOiBSb3V0ZXMgPSBbXG4gIHsgcGF0aDogJ3N1cHBvcnQnLCBjb21wb25lbnQ6IFN1cHBvcnRsaXN0Q29tcG9uZW50IH1cbl07XG4iXX0=
