@@ -26,14 +26,14 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <form (submit)="addTodo()" #todoForm="ngForm">
-                    <label for="todo">To Do</label>
-                    <span [hidden]="todo.name.valid" class="badge badge-warning">Required</span>
+                <form (submit)="addContact()" #contactForm="ngForm">
+                    <label for="contact">To Do</label>
+                    <span [hidden]="contact.name.valid" class="badge badge-warning">Required</span>
                     <div class="form-inline">
-                        <input required [(ngModel)]="todo.name" id="todo" name="todoName" type="text" class="form-control" size="50">
+                        <input required [(ngModel)]="contact.name" id="contcat" name="contactName" type="text" class="form-control" size="50">
                         <button type="submit" class="btn btn-primary">Add</button>
                     </div>
-                    <label><input type="checkbox" [(ngModel)]="showCompleted" name="todoCompleted"> show completed</label>
+                    <label><input type="checkbox" [(ngModel)]="showCompleted" name="contactCompleted"> show completed</label>
                 </form>
             </div>
         </div>
@@ -41,12 +41,13 @@
     <div class="row">
         <div class="col-md-5">
             <ul class="list-group">
-                <li *ngFor="let todo of (list | asCompletedFilter:showCompleted); let i=index" class="list-group-item">
-                <span title="Remove todo" class="badge" (click)="delTodo(i) ">x</span>
-                <label><input type="checkbox" [(ngModel)]="todo.done" name="todoDone"> {{todo.name}}</label>
+                <li *ngFor="let contact of (list ); let i=index" class="list-group-item">
+                <span title="Remove contact" class="badge" (click)="delContact(i) ">x</span>
+                <label><input type="checkbox" [(ngModel)]="contact.done" name="contactDone"> {{contact.name}}</label>
                 </li>
             </ul>
         </div>
     </div>
+
   </div>
 </div>

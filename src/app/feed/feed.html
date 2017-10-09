@@ -1,0 +1,67 @@
+<style>
+.badge:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
+.list-options {
+    vertical-align: middle;
+    display: inline-block;
+}
+[hidden] {
+    display: none;
+}
+.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+.ng-invalid:not(form) {
+  border-left: 5px solid orange; /* orange */
+}
+
+</style>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><i class="fa fa-list"></i> Feeds &nbsp;<span class="badge">{{list.length}}</span></h3>
+  </div>
+  <div class="panel-body">
+
+    <form-wizard>
+      <wizard-step [title]="'Step1'" [isValid]="emailForm.form.valid" (onNext)="onStep1Next($event)">
+        <h1>Step1</h1>
+        <form #emailForm="ngForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+              [(ngModel)]="data.email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+        </form>
+      </wizard-step>
+      <wizard-step [title]="'Step2'" (onNext)="onStep2Next($event)">
+        <h1>Step2</h1>
+        <form #addressForm="ngForm">
+          <div class="form-group">
+            <label for="exampleInputAddress">Address</label>
+            <input type="text" class="form-control" id="exampleInputAddress" name="exampleInputAddress" aria-describedby="emailHelp" placeholder="Enter email"
+              [(ngModel)]="data.address" required>
+            <small id="addressHelp" class="form-text text-muted">We'll never share your address with anyone else.</small>
+          </div>
+        </form>
+      </wizard-step>
+      <wizard-step [title]="'Step3'" (onNext)="onStep3Next($event)">
+        <h1>Step3</h1>
+      </wizard-step>
+      <wizard-step [title]="'Step4'" (onComplete)="onComplete($event)">
+        <div [ngSwitch]="isCompleted">
+          <div *ngSwitchDefault>
+            <h1>Step4</h1>
+          </div>
+          <div *ngSwitchCase="true">
+            <h4>Thank you! You have completed all the steps.</h4>
+          </div>
+        </div>
+      </wizard-step>
+    </form-wizard>
+
+
+  </div>
+</div>

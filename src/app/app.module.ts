@@ -9,6 +9,8 @@ import { HomeModule } from './home/home.module';
 import { FormWizardModule } from 'angular2-wizard';
 import { TodolistModule } from './todolist/todolist.module';
 import { SupportlistModule } from './support/support.module';
+import { ContactModule } from './contacts/contact.module';
+import { FeedModule } from './feed/feed.module';
 
 @NgModule({
     declarations: [
@@ -20,6 +22,8 @@ import { SupportlistModule } from './support/support.module';
         HomeModule,
         TodolistModule,
         SupportlistModule,
+        ContactModule,
+        FeedModule,
         FormWizardModule,
         routing
     ],

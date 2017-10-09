@@ -3,5 +3,5 @@ import { Routes } from '@angular/router';
 import { TodolistComponent } from './todolist.component';
 
 export const TodolistRoutes: Routes = [
-  { path: 'contacts', component: TodolistComponent }
+  { path: 'todolist', component: TodolistComponent }
 ];
